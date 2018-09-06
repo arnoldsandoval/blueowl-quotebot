@@ -5,15 +5,15 @@ import './Profile.scss'
 class Profile extends Component {
 
     render () {
-        const { children, layout, className } = this.props
-        const componentClass = classNames({
-            'profile': true,
-            [`${className}`]: className
-        })
+      const { children, layout, className } = this.props
+      const componentClass = classNames({
+        'profile': true,
+        [`${className}`]: className
+      })
 
-        return (
-            <div className={componentClass}>{children}</div>
-        )
+      return (
+        <div className={componentClass}>{children}</div>
+      )
     }
 }
 
