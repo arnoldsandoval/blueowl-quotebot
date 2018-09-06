@@ -1,5 +1,9 @@
 {
-    "extends": "standard",
+    "extends": [
+      "standard",
+      "jsx-a11y",
+      "plugin:jsx-a11y/strict"
+    ],
     "env": {
       "browser": true,
       "node": true,
