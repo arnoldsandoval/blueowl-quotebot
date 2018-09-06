@@ -1,0 +1,21 @@
+{
+    "extends": "standard",
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "parser": "babel-eslint",
+    "rules": {
+      "quotes": [1, "single"],
+      "strict": [2, "never"],
+      "react/prop-types": 2,
+      "react/jsx-uses-react": 2,
+      "react/jsx-uses-vars": 1,
+      "react/react-in-jsx-scope": 2,
+      "no-unused-vars": 0
+    },
+    "plugins": [
+      "react"
+    ]
+  }
