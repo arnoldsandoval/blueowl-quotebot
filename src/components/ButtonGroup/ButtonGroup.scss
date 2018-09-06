@@ -1,0 +1,21 @@
+.button-group {
+  border: 1px solid green;
+  display: flex;
+
+  &.layout-inline {
+    align-items: stretch;
+
+    .btn {
+      flex-grow: 1;
+    }
+  }
+
+  &.layout-list {
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .btn {
+      display: block;
+    }
+  }
+}
