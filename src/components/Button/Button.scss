@@ -1,0 +1,23 @@
+.btn {
+  border: 1px solid #ccc;
+  font-family: var(--baseFontFamily);
+  font-size: 1em;
+  padding: 5px 25px;
+
+  // Themes
+  &.theme-primary {
+    border-color: var(--colorPrimary);
+  }
+
+  &.theme-danger {
+    border-color: var(--colorDanger);
+  }
+
+  &.theme-warning {
+    border-color: var(--colorWarning);
+  }
+
+  &.theme-success {
+    border-color: var(--colorSuccess);
+  }
+}
