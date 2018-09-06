@@ -1,5 +1,4 @@
 .button-group {
-  border: 1px solid green;
   display: flex;
 
   &.layout-inline {
@@ -7,6 +6,15 @@
 
     .btn {
       flex-grow: 1;
+
+      // TODO: This falls apart quickly if more than three elements, consider nth-child
+      &:first-child {
+        border-right: 0;
+      }
+
+      &:last-child {
+        border-left: 0;
+      }
     }
   }
 
@@ -15,7 +23,7 @@
     margin-bottom: 10px;
 
     .btn {
-      display: block;
+      margin-bottom: 15px;
     }
   }
 }

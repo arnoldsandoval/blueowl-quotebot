@@ -1,5 +1,8 @@
 .btn {
   border: 1px solid #ccc;
+  font-family: var(--baseFontFamily);
+  font-size: 1em;
+  padding: 5px 25px;
 
   // Themes
   &.theme-primary {

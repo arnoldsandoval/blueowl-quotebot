@@ -3,6 +3,7 @@ import logo from './logo.svg'
 import './App.scss'
 import ButtonGroup from './components/ButtonGroup';
 import Button from './components/Button';
+import Profile from './components/Profile';
 
 class App extends Component {
   render () {
@@ -11,11 +12,11 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Quote bot</h1>
         </header>
-        <div className="profile">
+        <Profile>
           <h1>Profile Component</h1>
           {/* Robot Image */}
           {/* Map Image */}
-        </div>
+        </Profile>
 
         <div className="actions-quote">
           <h2>Robot commands</h2>
@@ -26,6 +27,7 @@ class App extends Component {
           </ButtonGroup>
         </div>
         <div className="quote">
+          <h2>Quote</h2>
           <blockquote>
             random quote
             <footer>&ndash; Author Names</footer>
