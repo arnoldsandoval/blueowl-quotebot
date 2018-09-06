@@ -1,0 +1,20 @@
+.btn {
+  border: 1px solid #ccc;
+
+  // Themes
+  &.theme-primary {
+    border-color: var(--colorPrimary);
+  }
+
+  &.theme-danger {
+    border-color: var(--colorDanger);
+  }
+
+  &.theme-warning {
+    border-color: var(--colorWarning);
+  }
+
+  &.theme-success {
+    border-color: var(--colorSuccess);
+  }
+}
