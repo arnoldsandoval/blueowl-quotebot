@@ -5,42 +5,34 @@ import ButtonGroup from './components/ButtonGroup';
 import Button from './components/Button';
 import Profile from './components/Profile';
 
+import thunk from 'redux-thunk'
+import promise from 'redux-promise-middleware'
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import { createLogger } from 'redux-logger'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import reducer from './reducers'
+import MainContainer from './containers/Main'
+
+const middleware = [
+  thunk,
+  promise(),
+]
+
+if (process.env.NODE_ENV !== 'production') {
+  middleware.push(createLogger())
+}
+
+const store = createStore(reducer, composeWithDevTools(
+  applyMiddleware(...middleware)
+))
+
 class App extends Component {
   render () {
     return (
-      <div className="container">
-        <header className="App-header">
-          <h1 className="App-title">Quote bot</h1>
-        </header>
-        <Profile>
-          <h1>Profile Component</h1>
-          {/* Robot Image */}
-          {/* Map Image */}
-        </Profile>
-
-        <div className="actions-quote">
-          <h2>Robot commands</h2>
-          <ButtonGroup layout="inline">
-            <Button>Read this quote</Button>
-            <Button>Show past quotes</Button>
-            <Button className="icon-lil-yoda">Yodify future quotes</Button>
-          </ButtonGroup>
-        </div>
-        <div className="quote">
-          <h2>Quote</h2>
-          <blockquote>
-            random quote
-            <footer>&ndash; Author Names</footer>
-          </blockquote>
-        </div>
-        <div className="actions-user">
-          <ButtonGroup layout="list">
-            <Button theme="danger">Lame</Button>
-            <Button theme="warning">Meh&hellip;</Button>
-            <Button theme="success">Great!</Button>
-          </ButtonGroup>
-        </div>
-      </div>
+      <Provider store={store}>
+        <MainContainer />
+      </Provider>
     )
   }
 }
