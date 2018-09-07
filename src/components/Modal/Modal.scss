@@ -1,0 +1,35 @@
+.modal {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: 0.33s cubic-bezier(0.17, 0.67, 0.62, 0.81) all; // TODO: Needs some tweaking, but its fine for now.
+  background: rgba(255, 255, 255, 0.95);
+
+  .action-close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  &.is-active {
+    transform: translateX(0%);
+
+    .action-close {
+      transition: 0.33s cubic-bezier(0.17, 0.67, 0.62, 0.81) all 0.66s;
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+
+  .modal-content {
+    max-width: 500px;
+  }
+}

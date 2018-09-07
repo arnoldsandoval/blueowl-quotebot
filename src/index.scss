@@ -1,0 +1,25 @@
+:root {
+  --baseFontFamily: 'Inconsolata', monospace;
+  --colorMuted: #ccc;
+  --colorPrimary: #01579B;
+  --colorDanger: #C62828;
+  --colorWarning: #FF8F00;
+  --colorSuccess: #388E3C;
+  --grid-gap: 30px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--baseFontFamily), monospace;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+@import 'styles/icons.scss';
+@import 'styles/lists.scss';
+@import 'styles/layout.scss';
+
