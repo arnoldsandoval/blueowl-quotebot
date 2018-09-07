@@ -1,19 +1,29 @@
 const DEFAULT_STATE = {
-  activeQuote: {
-    quote: "I haven't failed. I've just found 10,000 ways that don't work.",
-    author: 'Thomas Jefferson'
+  active: {
+    id: 0,
+    title: 'Thomas Jefferson',
+    content: "I haven't failed. I've just found 10,000 ways that don't work.",
+    link: "https://blueowl.xyz"
   },
-  previousQuotes: []
+  previous: []
 }
 
 const ui = function (state = DEFAULT_STATE, action) {
   switch (action.type) {
-     // saves the token into the state
-    case 'SAVE_QUOTE':
+    case 'SAVE_NEW_QUOTE':
       return {
         ...state,
-        previousQuotes: [
-          ...state.previousQuotes,
+        active: action.payload
+        // previous: [
+        //   ...state.previous,
+        //   action.payload
+        // ]
+      }
+    case 'SAVE_QUOTE_TO_PREVIOUS':
+      return {
+        ...state,
+        previous: [
+          ...state.previous,
           action.payload
         ]
       }
