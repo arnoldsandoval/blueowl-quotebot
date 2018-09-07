@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import './Profile.scss'
 
 class Profile extends Component {
 
