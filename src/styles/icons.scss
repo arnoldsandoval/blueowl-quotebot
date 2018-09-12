@@ -1,0 +1,26 @@
+// "Icons"
+
+.icon-lil-yoda {
+  position: relative;
+  &::after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #689F38;
+    right: 15px;
+    top: -30px;
+  }
+
+  &::before {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #795548;
+    right: 15px;
+    top: -20px;
+  }
+}
